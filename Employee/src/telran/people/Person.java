@@ -33,7 +33,7 @@ public class Person{
 	}
 
 //	String regex = "/^([A-Za-z0-9_\\.-]+)@([\\dA-Za-z\\.-]+)\\.([a-z\\.]{2,6})$/g";
-//	
+
 //	public boolean chekEmail(String email) {
 //		if(email == regex) {
 //		return true;
@@ -44,6 +44,7 @@ public class Person{
 //	}
 
 //	public boolean EmailCheck = chekEmail(email);
+
 	
 	public String toString() {
 		return "Person: " + "Name - " + name + ", Year - " + BirthYear + ", ID - " + id + ", Email: " + email + "";

@@ -1,6 +1,6 @@
 package src.telran.tests;
 
-import static org.junit.jupiter.api.Assertions.*;
+//import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
@@ -30,25 +30,13 @@ class HWPersEmplTest {
 		int BirthYear1 = 1870;
 		long id1 = 98765433;
 		String email1 = "Kastorskiymailwrong.ba";
-		
-		
-		
+				
 		Person person = new Person(name, BirthYear, id, email);
 		System.out.println(person.toString());
-		assertEquals(name, person.getName());
-		assertEquals(BirthYear, person.getBirthYear());
-		assertEquals(id, person.getId());
-		assertEquals(email, person.getEmail());
-
 		
 		Person person1 = new Person(name1, BirthYear1, id1, email1);
 		System.out.println(person1.toString());
-		assertEquals(name1, person1.getName());
-		assertEquals(BirthYear1, person1.getBirthYear());
-		assertEquals(id1, person1.getId());
-		assertEquals(email1, person1.getEmail());
-		
-		
+
 	}
 	
 	@Test
@@ -61,8 +49,6 @@ class HWPersEmplTest {
 		Employee Employee = new Employee(name, BirthYear, id, email, basicSlary);
 		System.out.println(Employee.toString());
 
-		
-		
 	}
 	
 	
@@ -79,11 +65,7 @@ class HWPersEmplTest {
 		
 		WageEmployee wageEmployee = new WageEmployee(name, BirthYear, id, email, wage, hours);
 		System.out.println(wageEmployee.toString());
-		assertEquals(name, wageEmployee.getName());
-		assertEquals(BirthYear, wageEmployee.getBirthYear());
-		assertEquals(id, wageEmployee.getId());
-		assertEquals(email, wageEmployee.getEmail());
-		assertEquals(Salary(wage, hours), wageEmployee.Salary(wage, hours));
+
 		
 	}
 	

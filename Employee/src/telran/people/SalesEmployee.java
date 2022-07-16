@@ -1,8 +1,6 @@
 package telran.people;
 
 public class SalesEmployee extends Employee {
-	
-	
 
 	public double Sales;
 	public double persentPay;
