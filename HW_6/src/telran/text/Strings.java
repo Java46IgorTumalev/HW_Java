@@ -3,7 +3,7 @@ package telran.text;
 public class Strings {
 
 	/**
-	 * 
+	 *  
 	 * @param str1 ascii string with no repeated symbols
 	 * @param str2 ascii string with no repeated symbols
 	 * @return array with two numbers
