@@ -37,12 +37,12 @@
 			}
 		}
 	}
-	private static void helperImpl(String str1, String str2, int[] res) {
+	private static void  helperImpl(String str1, String str2, int[] res) {
 		int helper[] = new int [127];
 		fillInitHelper(helper);
 		fillHelperString1(str1, helper);
 		fillResult(helper, res, str2);
-	}
+	} 
 	private static void fillInitHelper(int[] helper) {
 		for(int i = 0; i < helper.length; i++) {
 			helper[i] = -1;
@@ -196,5 +196,43 @@
 				int index = Integer.valueOf(strNumbers[i]);
 				helper[index]++;
 			}
+		}
+		public static boolean isIPv4(String ipV4str) {
+			return ipV4str.matches(ipV4Regex());
+			
+		}
+		public static boolean isJavaVariable(String javaVariable) {
+			return javaVariable.matches(javaVariableRegex());
+		}
+		public static boolean isArithmeticExpression(String expression) {
+			if (!checkParentheses(expression)) {
+				return false;
+				
+			}
+			expression = removeSpaces(expression);
+			
+			return expression.matches(arithmeticExpression());
+		}
+		private static String removeSpacesAndParentheses(String expression) {
+			return expression.replaceAll("[\\s()]+", "");
+		}
+		private static String removeSpaces(String expression) {
+			return expression.replaceAll("\\s+", "");
+		}
+		private static boolean checkParentheses(String expression) {
+			char[] strArray = expression.toCharArray();
+			int count = 0;
+			for(int i = 0; i < strArray.length; i++) {
+				if(strArray[i] == '(') {
+					count++;
+				}
+				else if (strArray[i] == ')') {
+					count--;
+					if (count < 0) {
+						return false;
+					}
+				}
+			}
+			return count == 0;
 		}
 	}
